@@ -9,21 +9,23 @@ function App() {
   const closeForm = () => setPage("HOME");
   return (
     <AppContainer>
-      <Header
-        title={`Welcome to Lesson ${
-          4 + 2
-        } of #react-typescript with #tailwindcss`}
-      />
-      {page === "HOME" ? (
-        <button
-          onClick={openForm}
-          className="bg-gray-200 text-gray-800 border-2 border-gray-400 rounded-lg p-2 m-2 w-full"
-        >
-          Go to Form
-        </button>
-      ) : (
-        <Form closeFormCB={closeForm} />
-      )}
+      <div className="p-4 mx-auto bg-white shadow-lg rounded-xl">
+        <Header
+          title={`Welcome to Lesson ${
+            4 + 2
+          } of #react-typescript with #tailwindcss`}
+        />
+        {page === "HOME" ? (
+          <button
+            onClick={openForm}
+            className="bg-blue-600 text-white rounded-lg p-2 m-2 w-full"
+          >
+            Go to Form
+          </button>
+        ) : (
+          <Form closeFormCB={closeForm} />
+        )}
+      </div>
     </AppContainer>
   );
 }
